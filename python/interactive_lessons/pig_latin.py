@@ -1,3 +1,5 @@
+# Python Lesson 3.2 - Conditionals & Control Flow
+
 print "Welcome to the Pig Latin Translator!"
 
 # raw_input takes in user input

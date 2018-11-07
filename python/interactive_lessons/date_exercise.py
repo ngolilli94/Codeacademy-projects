@@ -1,3 +1,5 @@
+# Python Lesson 2.2 - Strings & Console Output
+
 from datetime import datetime
 
 now = datetime.now()

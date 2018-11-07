@@ -1,3 +1,5 @@
+# Python Lesson 4.2 - Functions
+
 def hotel_cost(nights):
     return 140 * nights
 
