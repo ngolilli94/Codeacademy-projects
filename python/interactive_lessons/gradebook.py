@@ -36,3 +36,25 @@ def average(numbers):
     total = sum(numbers)
     total = float(total)
     return total / len(numbers)
+
+# Calculating weighted avg using built-in average() function
+def get_average(student):
+    homework = average(student["homework"])
+    quizzes = average(student["quizzes"])
+    tests = average(student["tests"])
+    return 0.10 * homework + 0.30 * quizzes + 0.60 * tests
+
+# Using if/else statement to convert student avg to letter grade
+def get_letter_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "Fail"
+    
+# print get_letter_grade(get_average(kashima))
