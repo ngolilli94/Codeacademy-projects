@@ -30,13 +30,14 @@ print ship_col
 
 # Allowing user 4 turns
 for turn in range(4):
-    print "Turn" + str(turn + 1)
+    print "Turn " + str(turn + 1)
     # Allowing user to guess ship location 
     guess_row = int(raw_input("Guess a row: "))
     guess_col = int(raw_input("Guess a column: "))
-    # Checking if user guess is correct
+    # Checking if user guess is correct & if so, break out of loop
     if guess_row == ship_row and guess_col == ship_col:
         print "Congratulations! You sank my battleship!"
+        break 
     else:
         # If statement to check if user guess within range of board
         if guess_row not in range(5) or guess_col not in range(5):
@@ -47,7 +48,11 @@ for turn in range(4):
         else:
             # Indicate guessed location
             board[guess_row][guess_col] = "X"
-            print "You missed my battleship!"
+            print "You missed my battleship! Try again!"
             print_board(board)
+# Let user know if out of guesses
+if turn == 3:
+    print "Looks like you're out of ammo--Game Over"
+
 
 # print_board(board)
