@@ -54,5 +54,3 @@ for turn in range(4):
 if turn == 3:
     print "Looks like you're out of ammo--Game Over"
 
-
-# print_board(board)
