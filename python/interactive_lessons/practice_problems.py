@@ -97,4 +97,33 @@ def anti_vowel(text):
             vowelless += c
     return vowelless
 
-print anti_vowel("Hey You!")
+# print anti_vowel("Hey You!")
+
+
+# Define a function scrabble_score that takes a string word as input and returns the equivalent scrabble score for that word. Assume you input is only one word contaning no spaces or punctuation. Your function should work even if the letters you get are uppercase, lowercase, or a mix. Assume that you're only given non-empty strings.
+score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1, 
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
+         "x": 8, "z": 10}
+def scrabble_score(word):
+    case_insensitive = word.lower()
+    word_score = 0
+    for letter in case_insensitive:
+        word_score += score[letter]
+    return word_score
+
+# print scrabble_score("Helix")
+
+
+# Write a function called censor that takes two strings, text and word, as input. It should return the text with the word you chose replaced with asterisks. Assume you input strings won't contain punctuation or upper case letters. The number of asterisks you put should correspond to the number of letters in the censored word.
+def censor(text, word):
+    split_text = text.split()
+    censored_text = []
+    for i in split_text:
+        if i == word:
+            i = "*" * len(word)
+        censored_text.append(i)
+    return " ".join(censored_text)
+
+# print censor("this hack is wack hack", "hack")
