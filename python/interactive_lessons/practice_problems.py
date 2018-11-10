@@ -127,3 +127,64 @@ def censor(text, word):
     return " ".join(censored_text)
 
 # print censor("this hack is wack hack", "hack")
+
+
+# Define a function callled count that has two arguments called sequence and item. Return the number of times the item occurs in the list. For example: count([1, 2, 1, 1], 1) should return 3 (because 1 appears 3 times in the list).
+def count(sequence, item):
+    tally = 0
+    for i in sequence:
+        if i == item:
+            tally += 1
+    return tally
+
+# print count([1, 2, 1, 1], 1)
+
+
+# Define a function called purify that takes in a list of numbers, removes all odd numbers in the list and returns the result. For example, purify([1, 2, 3]) should return [2]. Do not directly modify the list you are given as input; instead, return a new list with only the even nnumbers.
+def purify(lst):
+    even_only = []
+    for num in lst:
+        if num % 2 == 0:
+            even_only.append(num)
+    return even_only
+
+# print purify([1, 2, 3])
+# print purify([-4, -3, -1, 0, 2, 2.2])
+
+
+# Define a function called product that takes a list of integers as input and returns the product of all of the elements in the list. For example: product([4, 5, 5]) should return 100 (because 4 * 5 * 5 is 100). Don't worry about the list being empty. Your function should return an integer.
+def product(lst):
+    result = 1
+    for num in lst:
+        result *= num
+    return result
+
+# print product([4, 5, 5])
+# print product([-2, 1, 10])
+# print product([2.5, 4, 10])
+
+
+# Define a function remove_duplicates that takes in a list and removes elements of the list that are the same. For exmaple: remove_duplicates([1, 1, 2, 2]) should return [1, 2].
+def remove_duplicates(lst):
+    single_occurence = []
+    for ele in lst:
+        if ele not in single_occurence:
+            single_occurence.append(ele)
+    return single_occurence
+
+# print remove_duplicates([1, 1, 2, 2])
+# print remove_duplicates([-2, -2, 1, 2, 2.0])
+
+
+# Write a function called median that takes a list as an input and returns the median value of the lst. For example: median([1, 1, 2]) should return 1. The list can be of any size; if the list contains an even number of elements, your function should return the average of the middle two.
+def median(lst):
+    ordered_list = sorted(lst)
+    midway = len(ordered_list) / 2
+    if len(ordered_list) % 2 == 0:
+        mid_two = ordered_list[midway] + ordered_list[midway -1]
+        return mid_two / 2.0
+    else:
+        return ordered_list[(len(ordered_list) - 1) / 2]
+
+# print median([7, 12, 3, 1, 6])
+# print median([7, 3, 1, 4])
