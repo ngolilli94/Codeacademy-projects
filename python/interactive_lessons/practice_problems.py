@@ -188,3 +188,14 @@ def median(lst):
 
 # print median([7, 12, 3, 1, 6])
 # print median([7, 3, 1, 4])
+
+# def median(lst):
+#     ordered = sorted(lst)
+#     mid = 0
+#     midway = len(ordered) / 2
+#     if len(lst) % 2 == 0:
+#         divide_by_two = ordered[midway] + ordered[midway - 1]
+#         mid = float(divide_by)_two) / 2
+#     else:
+#         mid = ordered[int(midway)]
+#     return mid
