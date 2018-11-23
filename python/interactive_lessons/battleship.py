@@ -29,6 +29,7 @@ print ship_row
 print ship_col
 
 # Allowing user 4 turns
+# !! raw_input renamed to 'input' in Python3 !!
 for turn in range(4):
     print "Turn " + str(turn + 1)
     # Allowing user to guess ship location 
