@@ -57,7 +57,7 @@ def factorial(x):
 # def factorial(x):
 #     total = 1
 #     while x > 0:
-#         totral *= x
+#         total *= x
 #         x-= 1
 #     return total
 
